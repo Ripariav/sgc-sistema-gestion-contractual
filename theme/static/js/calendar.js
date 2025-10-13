@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay',
+            right: 'dayGridMonth,timeGridWeek',
         },
         events: window.contractsData.map(contract => ({
-            title: contract.numero_contrato + ': ' + contract.descripcion,
+            title: contract.numero_contrato + ': ' + contract.objeto,
             start: contract.plazo_fin,
-            url: `/contratos/${contract.id}/detalles/`,
+            url: `/contrato/${contract.id}/`,
             // Puedes agregar más propiedades si es necesario
         })),
         locale: 'es', // Establece el idioma en español

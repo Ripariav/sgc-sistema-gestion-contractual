@@ -3,9 +3,8 @@
 {% load form_filters %}
 {% block title %} SCG - Contratos {% endblock title %}
 {% block contentdash %}
-
-<section class="text-gray-600 body-font w-screen  overflow-auto">
-    <div class="container px-5 py-14 my-10 ml-10 bg-white shadow-lg rounded-lg overflow-y-auto max-w-[1400px]">
+<section class="text-gray-600 body-font "> 
+    <div class="container px-5 py-14 my-10 mx-auto bg-gray-300 shadow-lg rounded-lg ml-10 max-w-[1600px]">
       <div class="flex flex-col text-center w-full mb-10">
         <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Seccion de contratos</h1>
         <p class="lg:w-2/3 mx-auto leading-relaxed text-base">¡Hola, {{user.username}}!</p>
@@ -190,15 +189,10 @@
         <a href="{% url "crear_contrato" %}" class="flex ml-auto text-white bg-sky-900 border-0 py-2 px-6 focus:outline-none hover:bg-sky-700 rounded group">Añadir Contrato<i class="fa-solid fa-plus flex mt-1 items-center justify-center ml-1 transition-transform duration-300 group-hover:rotate-90"></i></a>
       </div>
       <div id="calendar" class="calendar hidden w-full h-[800px] mx-auto my-10"></div>
-    </div>
-    
-  </section>
-
-
-
-
-
+    </div> 
+</section>
 {% endblock %}
+
 
 {% block header %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">

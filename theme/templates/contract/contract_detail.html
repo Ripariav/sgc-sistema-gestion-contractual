@@ -4,9 +4,7 @@
 {% load form_filters %}
 {% block title %} Contrato - {{ contrato.numero_contrato }} {% endblock title %}
 {% block contentdash %}
-
-<section class="text-gray-600 body-font w-screen overflow-auto">
-    <div class="container px-5 py-14 my-10  bg-white shadow-lg rounded-lg ml-10 max-w-[1400px]">
+    <div class="container px-5 py-14 my-10  bg-gray-300 shadow-lg rounded-lg ml-10 ">
         <div class="flex flex-col text-center w-full mb-4">
             <h1 class="sm:text-4xl text-3xl font-bold title-font mb-1 text-gray-900">Contrato - {{ contrato.objeto.lower }}</h1>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base ">Id del contrato: {{ contrato.id }}</p>
@@ -84,7 +82,7 @@
         </div>
         
     </div>
-</section>
+
 
 {% endblock %}
 

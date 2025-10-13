@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% load static tailwind_tags %} {% load static %} 
 {% block content %}
 <div class="flex flex-row">
-  <div class="h-screen flex flex-col bg-gray-200 sticky border-r border-slate-200"  id="barra-lateral">
+  <div class="h-screen flex flex-col bg-gray-300 sticky border-r border-slate-300"  id="barra-lateral">
     <div class="mt-2 flex items-center justify-center ">
       <img src="{% static "img/logo.png" %}" alt="" class="w-16">
     </div>
@@ -16,13 +16,13 @@
     </ul>
     <div class="mt-auto flex items-center justify-center mb-4">
       <a href="{% url 'logout' %}" class="flex items-center justify-center">
-        <i class="fa-solid fa-right-from-bracket text-2xl text-slate-800 hover:scale-125 hover:text-slate-700 transition-all"><span class="absolute -top-14 left-1/2 transform -translate-x-1/2 z-20 px-4 py-2 text-sm font-bold text-white bg-gray-900 rounded-lg shadow-lg transition-transform duration-300 ease-in-out scale-0 group-hover:scale-100">Logout</span></i>
+        <i class="fa-solid fa-right-from-bracket text-2xl text-slate-800 hover:scale-125 hover:text-slate-700 transition-all"></i> 
       </a>
     </div>
   </div>
-  <div class="flex h-screen justify-start overflow-y-auto flex-col">
-      {% block contentdash %}
-      {% endblock contentdash %}
+  <div class="flex h-screen justify-start items-center overflow-y-auto flex-col w-full"> 
+        {% block contentdash %}
+        {% endblock contentdash %}
   </div>
 </div>
 

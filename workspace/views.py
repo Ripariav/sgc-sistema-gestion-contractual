@@ -120,6 +120,7 @@ def contratosview(request):
             estado = 'sin fecha de finalización'
 
         contratos_data.append({
+            'id': contrato.id,
             'numero_contrato': contrato.numero_contrato,
             'objeto': contrato.objeto,
             'plazo_fin': contrato.ultima_fecha.isoformat() if contrato.ultima_fecha else None,

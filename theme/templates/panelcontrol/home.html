@@ -1,7 +1,7 @@
 {% extends "dashboard.html" %} {% load static tailwind_tags %} {% load static %} {% load humanize %}
 {% block contentdash %}
-<section class="text-gray-600 body-font w-screen  overflow-auto">
-  <div class=" ml-10 w-screen px-2 py-8 sm:px-6 sm:py-12 lg:px-8 max-w-[1400px]">
+<section class="text-gray-600 body-font ">
+  <div class=" mx-auto w-screen px-2 py-8 sm:px-6 sm:py-12 lg:px-8 max-w-[1400px] ">
     <div class="mx-auto max-w-3xl text-center">
       <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Panel de Gestión de Contratos</h2>
   
@@ -13,13 +13,13 @@
     <div class="mt-10 ml-10 flex flex-row gap-4">
       <div class="flex gap-4">
         <div class="flex flex-col gap-4">
-          <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center w-[300px]">
+          <div class=" bg-gray-300 flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center w-[300px]">
             <dt class="order-last text-lg font-medium text-gray-500">Numero Contratos Vencidos</dt>
       
             <dd class="text-4xl font-extrabold text-sky-800 md:text-5xl">{{num_contratos_pen}}</dd>
           </div>
       
-          <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center w-[300px]">
+          <div class="bg-gray-300 flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center w-[300px]">
             <dt class="order-last text-lg font-medium text-gray-500">Cantitad Total de Contratos</dt>
       
             <dd class="text-4xl font-extrabold text-sky-800 md:text-5xl">{{canti_contratos}}</dd>
@@ -27,13 +27,13 @@
         </div>
     
         <div class="flex flex-col gap-4">
-          <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center w-[300px]">
+          <div class=" bg-gray-300 flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center w-[300px]">
             <dt class="order-last text-lg font-medium text-gray-500">Contratos Activos</dt>
       
             <dd class="text-4xl font-extrabold text-sky-800 md:text-5xl">{{num_contratos_act}}</dd>
           </div>
       
-          <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center w-[300px] overflow-x-auto">
+          <div class=" bg-gray-300 flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center w-[300px] overflow-x-auto">
             <dt class="order-last text-lg font-medium text-gray-500">Dinero invertido hasta la fecha</dt>
       
             <dd class="text-4xl font-extrabold text-sky-800 md:text-5xl">{{ num_precio_act|floatformat:0|intcomma }}</dd>
@@ -45,7 +45,7 @@
       <div class="flex flex-col gap-4">
         <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 md:min-w-[800px] h-72 ">
           <h1 class="text-2xl font-bold  text-center mb-5">Contratos Vencidos</h1>
-          <div class="text-lg font-medium text-gray-500">
+          <div class="text-lg font-medium text-gray-500 ">
             <ul class="justify-start flex flex-col">
               <table class="gap-4">
                 <thead>
@@ -79,10 +79,10 @@
       
     </div>
 
-    <div class="flex flex-col items-center justify-center mt-10 ">
+    <div class="flex flex-col items-center justify-center mt-10  ">
         <h2 class="text-3xl font-bold mb-6">Dashboard - Estadísticas</h2>
       
-        <div class="container p-4 flex flex-col bg-white shadow-lg rounded-lg">
+        <div class="container p-4 flex flex-col bg-gray-300 shadow-lg rounded-lg">
           <div class="flex flex-row gap-20 mt-4 flex-wrap items-center justify-center">
             <div id="bar-chart" style="width: 250px; height: 250px;"></div>
             <div id="line-chart" style="width: 250px; height: 250px;"></div>
