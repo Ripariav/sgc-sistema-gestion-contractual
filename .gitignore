@@ -23,3 +23,22 @@ staticfiles
 .python-version
 
 .contexto-ia
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker/
+docker-desktop-*.*
+.dockerignore
+
+# Entorno y DB locales
+.env
+db.sqlite3
+
+# Node
+node_modules/
+theme/node_modules/
+
+# Python
+__pycache__/
+*.pyc

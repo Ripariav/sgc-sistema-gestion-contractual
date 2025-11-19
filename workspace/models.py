@@ -186,7 +186,7 @@ class Contrato(models.Model):
     #documentos
     documentos_cargados = models.URLField(max_length=600, blank=True, null=True)
     #Secop
-    fecha_publicacion_secop = models.DateField(blank=True, null=True, default="www.unillanos.edu.co")
+    fecha_publicacion_secop = models.DateField(blank=True, null=True, default="www.none.com")
     publicacion_secop = models.URLField(
         max_length=600, 
         blank=True,
