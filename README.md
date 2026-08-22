@@ -1,63 +1,71 @@
-# SGC - Sistema de Gestión Contractual
+# SGC — Sistema de Gestión Contractual
 
-## Descripción
+![Django](https://img.shields.io/badge/Django-Backend-092E20?logo=django&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwindcss&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Contenedores-2496ED?logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Base%20de%20Datos-4169E1?logo=postgresql&logoColor=white)
 
-El **SGC - Sistema de Gestión Contractual** es una plataforma modular diseñada para gestionar el ciclo de vida de contratos en la Universidad de los Llanos. Este sistema permite a los usuarios crear, actualizar y administrar contratos de manera eficiente, asegurando un seguimiento adecuado y una gestión documental efectiva.
+Plataforma modular para gestionar el ciclo de vida de contratos en la
+**Universidad de los Llanos**. Permite crear, actualizar y administrar
+contratos de manera eficiente, con seguimiento y gestión documental.
+
+---
 
 ## Características
 
-- **Gestión de Contratos**: Crear, editar y eliminar contratos.
-- **Interfaz Intuitiva**: Diseñada con Tailwind CSS para una experiencia de usuario fluida.
-- **Autenticación de Usuarios**: Integración con el sistema de autenticación de Django.
-- **Módulos Personalizables**: Estructura modular que permite la expansión de funcionalidades.
-- **Soporte para Múltiples Tipos de Contratos**: Gestión de diferentes tipos de contratos y sus respectivas alteraciones.
+- Gestión de contratos: crear, editar y eliminar
+- Interfaz construida con Tailwind CSS
+- Autenticación de usuarios (Django)
+- Estructura modular, pensada para expandir funcionalidades
+- Soporte para múltiples tipos de contratos y sus alteraciones
 
-## Tecnologías Utilizadas
+---
+
+## Tecnologías
 
 - **Backend**: Python, Django
-- **Frontend**: HTML, CSS (Tailwind CSS), JavaScript
-- **Base de Datos**: PostgreSQL (recomendado)
+- **Frontend**: HTML, CSS (Tailwind), JavaScript
+- **Base de datos**: PostgreSQL (recomendado)
 - **Contenedores**: Docker
-- **Gestión de Archivos**: MinIO (opcional para almacenamiento de archivos)
+- **Archivos**: MinIO (opcional, para almacenamiento)
+
+---
 
 ## Instalación
 
-### Requisitos Previos
+Requisitos previos: Python 3.11, Node.js + npm, Docker y Docker Compose.
 
-- Python 3.11
-- Node.js y npm
-- Docker y Docker Compose
+```bash
+git clone https://github.com/Ripariav/sgc-sistema-gestion-contractual.git
+cd sgc-sistema-gestion-contractual
 
-### Pasos de Instalación
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/Ripariav/sgc-sistema-gestion-contractual.git
-   cd sgc-sistema-gestion-contractual
-   Instala las dependencias de Python:
-
-Instala las dependencias de Node.js:
+# Dependencias de Python
 pip install -r requirements.txt
 
-Configura las variables de entorno en un archivo .env (ejemplo en .env.example).
+# Dependencias de Node (Tailwind)
+cd theme/static_src && npm install && cd ../..
 
-cd theme/static_src
-npm install
+# Variables de entorno (ver .env.example)
+cp .env.example .env
 
+# Migraciones
+python manage.py migrate
+```
 
-Ejecuta las migraciones de la base de datos:
+La aplicación queda disponible en `http://localhost:8000`.
 
-Accede a la aplicación en tu navegador en http://localhost:8000.
+---
 
-Contribuciones
-Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
+## Contribuciones
 
-Haz un fork del repositorio.
-Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
-Realiza tus cambios y haz commit (git commit -m 'Añadir nueva característica').
-Haz push a la rama (git push origin feature/nueva-caracteristica).
-Abre un Pull Request.
-Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+1. Hacé un fork del repositorio
+2. Creá una rama (`git checkout -b feature/nueva-caracteristica`)
+3. Commiteá tus cambios
+4. Hacé push a la rama
+5. Abrí un Pull Request
 
-Para más información, puedes contactar a https://www.linkedin.com/in/danielfriverav/
+---
+
+## Licencia
+
+MIT — ver [LICENSE](LICENSE).
