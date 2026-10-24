@@ -609,7 +609,7 @@ def exportar_contratos_csv(request):
         writer.writerow([
             contrato.numero_contrato, 
             contrato.tipo_contratacion, 
-            contrato.descripcion,
+            contrato.objeto,
             contrato.clase, 
             contrato.valor, 
             contrato.fecha_suscripcion_contrato.strftime("%d/%m/%Y") if contrato.fecha_suscripcion_contrato else '',
